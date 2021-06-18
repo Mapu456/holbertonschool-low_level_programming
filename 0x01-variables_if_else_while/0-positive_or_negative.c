@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
 
+/* main - print if the last digit is positive, zero or negative*/
+/* more headers goes there */
 /* betty style doc for function main goes there */
 int main(void)
 {
