@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
-/* main - print if the last digit is positive, zero or negative*/
-/* more headers goes there */
-/* betty style doc for function main goes there */
+/**
+* main - print if the last digit is positive, zero or negative
+*Return: Always 0 (Success)
+*/
 int main(void)
 {
 	int n;
