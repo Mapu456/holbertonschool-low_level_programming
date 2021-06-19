@@ -9,16 +9,13 @@ int main(void)
 {
 	int alp;
 
-	char comma = ',';
-	char symbol = '$';
-
 	for (alp = '0'; alp <= '9'; alp++)
 	{
 		putchar(alp);
-		if (alp != 9)
-			putchar(comma);
+		if (alp != '9')
+			putchar(',');
 		else
-			putchar(symbol);
+			putchar('$');
 	}
 	putchar('\n');
 	return (0);
