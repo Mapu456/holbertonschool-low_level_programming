@@ -15,7 +15,7 @@ int main(void)
 		if (alp != '9')
 			putchar(',');
 		else
-			putchar('$');
+			putchar(' ');
 	}
 	putchar('\n');
 	return (0);
