@@ -12,8 +12,10 @@ int main(void)
 
 	for (alp = '0'; alp <= '9'; alp++)
 	{
-		for (let = 'a'; let <= 'f'; let++)
 		putchar(alp);
+	}
+	for (let = 'a'; let <= 'f'; let++)
+	{
 		putchar(let);
 	}
 	putchar('\n');
