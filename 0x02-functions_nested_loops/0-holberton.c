@@ -1,14 +1,20 @@
-#include <stdio.h>
+#include "holberton.h"
 /**
  * main - print if the last digit is positive, zero or negative
  *Return: Always 0 (Success)
  */
 int main(void)
 {
-	char note[] = "Holberton";
-	{
-		printf(note);
-	}
-	printf("\n");
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
+	_putchar('\n');
+
 	return (0);
 }
