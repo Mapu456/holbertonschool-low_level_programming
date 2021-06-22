@@ -4,17 +4,17 @@
  * @n: is int
  *Return: Always 0 (Success)
  */
-int print_last_digit(int digit)
+int print_last_digit(int n)
 {
-	if (digit >= 0)
+	if (n >= 0)
 	{
-		_putchar (digit % 10 + '0');
-		return (digit % 10);
+		_putchar (n % 10 + '0');
+		return (n % 10);
 	}
 	else
 	{
-		digit = digit * -1;
-		_putchar (digit % 10 + '0');
-		return (digit % 10);
+		digit = n * -1;
+		_putchar (n % 10 + '0');
+		return (n % 10);
 	}
 }
