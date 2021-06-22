@@ -1,19 +1,20 @@
 #include "holberton.h"
 /**
- * main - prints the sign of a number
+ * print_last_digit - prints the last digit of a number
+ * @last: is int
  *Return: Always 0 (Success)
  */
-int print_last_digit(int last)
+int print_last_digit(int n)
 {
 	int digit;
 
-	digit = (last % 10);
+	digit = n % 10;
 
-	if (digit < 0)
+	if (digit >= 0)
 	{
 		digit = (-1 * digit);
 	}
 
-	_putchar(digit + 0);
+	_putchar(digit + '0');
 	return (digit);
 }
