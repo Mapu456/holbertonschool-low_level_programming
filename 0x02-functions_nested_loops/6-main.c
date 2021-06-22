@@ -2,6 +2,8 @@
 #include <stdio.h>
 
 /**
+ * _abs - computes the absolute value of an integer.
+ * @num: the int
  * main - check the code for Holberton School students.
  *
  * Return: Always 0.
