@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * main - print if the last digit is positive, zero or negative
+ * print_to_98 - prints all natural numbers from n to 98
+ * @n: number input
  */
 void print_to_98(int n)
 {
@@ -15,8 +16,7 @@ void print_to_98(int n)
 				printf("%d", i);
 			else
 				printf("%d, ", i);
-		}
-		
+		}		
 	} else if (n >= 98)
 	{
 		for (i = n; i >= 98; i--)
