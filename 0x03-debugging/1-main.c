@@ -1,10 +1,8 @@
 #include <stdio.h>
-
 /**
  * main - causes an infinite loop
  * Return: 0
  */
-
 int main(void)
 {
 	int i;
@@ -13,7 +11,7 @@ int main(void)
 
 	i = 0;
 	/**
-	 * main - causes an infinite loop
+	 * main - causes an infinite loops
 	 */
 	while (i < 10)
 	{
