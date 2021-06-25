@@ -1,21 +1,22 @@
 #include "holberton.h"
 
 /**
- * more_numbers - function that checks for uppercase character
+ * print_line - function that checks for uppercase character
  *
  */
 void print_line(int n)
 {
-	int c;
+	int c = 0;
 
-	while ((c = n))
+	if (n > 0)
 	{
-		if (c <= 0)
+		while (c <= n)
 		{
-			_putchar ('\n');
+			_putchar('_');
+			c++;
 		}
-		c++;
-		_putchar ('-');
-		_putchar ('\n');
+		_putchar('\n');
 	}
+	else
+		_putchar('\n');
 }
