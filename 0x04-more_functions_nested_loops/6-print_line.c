@@ -2,7 +2,7 @@
 
 /**
  * print_line - function that checks for uppercase character
- *
+ * @n: is the int
  */
 void print_line(int n)
 {
