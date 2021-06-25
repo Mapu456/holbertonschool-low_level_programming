@@ -1,8 +1,8 @@
 #include "holberton.h"
-
 /**
- * print_line - function that checks for uppercase character
+ * print_line - draws a straight line in the terminal
  * @n: is the int
+ * Return: 0
  */
 void print_line(int n)
 {
