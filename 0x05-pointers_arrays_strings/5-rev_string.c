@@ -3,12 +3,12 @@
 #include <string.h>
 
 /**
- * print_rev - returns the length of a string
+ * rev_string - returns the length of a string
  * @s: string reverse
  *
  * Return: the length of the string
  */
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int i, len = 0;
 
