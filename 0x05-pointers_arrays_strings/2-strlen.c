@@ -5,14 +5,15 @@
  * int _strlen -  returns the length of a string.
  *
  * @s: the int
+ * return : i
  */
 int _strlen(char *s)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i <= *s; i++)
+	while (s[i] != '\0')
 	{
-		_putchar (i + '0');
+		i++;
 	}
 	return (i);
 }
