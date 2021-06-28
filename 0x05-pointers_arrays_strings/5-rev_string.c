@@ -10,9 +10,13 @@
  */
 void rev_string(char *s)
 {
-        int len;
+	int i, len = 0;
 
 	len = strlen(s);
 
-	printf("%d\n", len);
+	for (i = len - 1; i >= 0; i--)
+	{
+		printf("%c", s[i]);
+	}
+	printf("\n");
 }
