@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * rev_string - returns the length of a string
@@ -10,13 +8,20 @@
  */
 void rev_string(char *s)
 {
-	int i, len = 0;
+	int i = 0;
+	int len = 0;
+	int x;
+	int p = 0;
 
-	len = strlen(s);
-
-	for (i = len - 1; i >= 0; i--)
+	while (s[len] != '\0')
 	{
-		printf("%c", s[i]);
+		len++;
 	}
-	printf("\n");
+	for ( i = len - 1; i > 0; i--)
+	{
+		x = s[i];
+		s[i] = s[p];
+		s[p] = x;
+		p++;
+	}
 }
