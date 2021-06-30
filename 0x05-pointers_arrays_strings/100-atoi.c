@@ -13,8 +13,7 @@ int _atoi(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		_putchar (s[i]);
+		printf ("%d\n", s[i]);
 	}
-	_putchar ('\n');
 	return (0);
 }
