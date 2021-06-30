@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * puts_half - print only one character out of two
- * @str: input
+ * print_array - print only one character out of two
+ * @a: input
+ * @n: input
  * Return: number
  */
 void print_array(int *a, int n)
@@ -13,6 +14,15 @@ void print_array(int *a, int n)
 	for (i = 0; i < n; i++)
 	{
 		printf("%d, ", a[i]);
+		while (a[i] != '\0')
+		{
+			i++;
+			c = i - 1;
+			if (c < n)
+			{
+				printf("%d", a[c]);
+			}
+		}
 	}
 	printf("\n");
 }
