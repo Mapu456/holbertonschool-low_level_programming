@@ -8,6 +8,9 @@
 char *cap_string(char *str)
 {
 	int i = 0;
+	int a;
+	int organize[] = {',', ';', '.', '?', '"',
+			  '(', ')', '{', '}', ' ', '\n', '\t'};
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -19,20 +22,15 @@ char *cap_string(char *str)
 			}
 			continue;
 		}
-		if (str[i] == '\t' || str[i] == ' ' || str[i] == '.')
+		for (a = 0; a < 13; a++)
 		{
-			++i;
-			if (str[i] >= 'a' && str[i] <= 'z')
+			if (str[i] == organize[a])
 			{
-				str[i] = str[i] - 32;
-			}
-			continue;
-		}
-		else
-		{
-			if (str[i] >= 'A' && str[i] <= 'Z')
-			{
-				str[i] = str[i] + 32;
+
+				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				{
+					str[i + 1] -= 32;
+				}
 			}
 		}
 	}
