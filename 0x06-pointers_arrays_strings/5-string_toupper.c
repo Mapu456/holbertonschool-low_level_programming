@@ -9,9 +9,9 @@ char *string_toupper(char *ptr)
 {
 	int i = 0;
 
-	while( ptr[i] != '\0' )
+	while (ptr[i] != '\0')
 	{
-		if( ptr[i] >= 'a' && ptr[i] <= 'z' )
+		if (ptr[i] >= 'a' && ptr[i] <= 'z')
 		{
 			ptr[i] = ptr[i] - 32;
 		}
