@@ -1,9 +1,8 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * print_chessboard - Write a function locates a character in a string
  * @a: strings
- * Return: char
  */
 void print_chessboard(char (*a)[8])
 {
@@ -14,8 +13,8 @@ void print_chessboard(char (*a)[8])
 	{
 		for (j = 0; j < 8; j++)
 		{
-			_putchar (a[i][j]);
+			_putchar(a[i][j]);
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
