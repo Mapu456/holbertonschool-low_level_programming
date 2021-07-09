@@ -5,34 +5,32 @@
  * main - prints name
  * @argv: array whit arguements
  * @argc: number of arguments
- * Return: 0
+ * Return: 0 if succesful
  */
 int main(int argc, char *argv[])
 {
 	int sum = 0;
 	int i;
+	int j;
 
 	if (argc == 1)
 	{
 		printf("0\n");
 		return (0);
 	}
-	else
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if ((*argv[i] >= 'a' && *argv[i] <= 'z') ||
-			    (*argv[i] >= 'A' && *argv[i] <= 'Z'))
+			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
-			else
-			{
-				sum += atoi(argv[i]);
-			}
 		}
-		printf("%d\n", sum);
+		sum += atoi(argv[i]);
+
 	}
+	printf("%d\n", sum);
 	return (0);
 }
