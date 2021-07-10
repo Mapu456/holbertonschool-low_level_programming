@@ -3,8 +3,6 @@ int natural_square_root(int n, int c);
 /**
 * _sqrt_recursion - give me the number
 * @n: int
-* @c: counter
-* natural_square_root - obtain the natural square root
 * Return - in natural_square_root
 */
 int _sqrt_recursion(int n)
