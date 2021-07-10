@@ -1,11 +1,11 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _sqrt_recursion - give me the number
  * @n: int
  * @c: int
  * int natural_square_root - obtain the natural square root
  */
+int natural_square_root(int n, int c);
 
 int _sqrt_recursion(int n)
 {
