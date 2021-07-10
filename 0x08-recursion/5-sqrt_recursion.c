@@ -4,6 +4,7 @@ int natural_square_root(int n, int c);
 * _sqrt_recursion - give me the number
 * @n: int
 * Return - in natural_square_root
+* _sqrt_recursion - give me the number
 */
 int _sqrt_recursion(int n)
 {
