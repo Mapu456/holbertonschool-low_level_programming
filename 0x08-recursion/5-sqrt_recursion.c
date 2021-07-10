@@ -14,6 +14,10 @@ int _sqrt_recursion(int n)
 		return (-1);
 	return (natural_square_root(n, 1));
 }
+/**
+* natural_square_root - obtain the natural square root
+* Return - in natural_square_root
+*/
 int natural_square_root(int n, int c)
 {
 	if (c * c > n)
