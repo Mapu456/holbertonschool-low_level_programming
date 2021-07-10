@@ -1,11 +1,10 @@
 #include "holberton.h"
 int natural_square_root(int n, int c);
 /**
-* _sqrt_recursion - give me the number
-* @n: int
-* Return - in natural_square_root
-* _sqrt_recursion - give me the number
-*/
+ * _sqrt_recursion - no loop, 1. 2nd function - checks for perfect square
+ * @n: input
+ * Return: Always 0 (Success)
+ */
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
