@@ -6,7 +6,7 @@ int _long(char *s);
 
 /**
  * is_palindrome - determine if string is a palindrome
- * @s: string 
+ * @s: string
  *
  * Return: 1 if it is, 0 it's not
  */
