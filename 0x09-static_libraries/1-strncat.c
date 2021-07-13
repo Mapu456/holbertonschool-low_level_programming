@@ -1,26 +1,29 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * *_strcat - concatenates two strings
+ * *_strncat - concatenates two strings
  * @src: strings
  * @dest: strings
+ * @n: strings
  * Return: number
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i;
-	int j;
+	int i = 0;
+	int c;
+	int x;
 
-	j = 0;
-
-	while (dest[j] != '\0')
+	while (dest[i] != '\0')
 	{
-		j++;
+		i++;
 	}
-	for (i = 0; src[i] != '\0'; ++i, ++j)
+	/**si el if es cierto: c = n || 1024 = 1024*/
+	for (c = 0; c < n; c++)
 	{
-		dest[j] = src[i];
+		x = i + c;
+		dest[x] = src[c];
+		if (src[c] == '\0')
+			c = n;
 	}
-	dest[j] = '\0';
 	return (dest);
 }
