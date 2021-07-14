@@ -6,7 +6,6 @@
  * _strdup -  creates an array of chars
  * size - the number of characters
  * @str: size input
- * @p: char
  * Return: 0
  */
 
