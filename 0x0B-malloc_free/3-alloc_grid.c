@@ -14,33 +14,37 @@ int **alloc_grid(int width, int height)
 	int f;
 	int **newstr;
 
-	if (width <= 0 || height <= 0)
+	if (width == 0 || height == 0)
 	{
 		return (NULL);
 	}
-	newstr = malloc(sizeof(int *) * height);
+	newstr = malloc(sizeof(*newstr) * height);
 	if (newstr == NULL)
 	{
 		return (00);
 	}
-	for (i = 0; i <= height; i++)
+	else
 	{
-		newstr[i] = malloc(sizeof(int **) * width);
-		if (newstr[i] == NULL)
+		for (i = 0; i < height; i++)
 		{
-			i--;
-			for (i; i >= 0; i--)
+			newstr[i] = malloc(sizeof(**newstr) * width);
+			if (newstr[i] == NULL)
 			{
-				free(newstr[i]);
+				i--;
+				for (; i >= 0; i--)
+				{
+					free(newstr[i]);
+				}
+				free(newstr);
+				return (00);
 			}
-			free(newstr);
 		}
-	}
-	for (f = 0; f <= height; f++)
-	{
-		for (n = 0; n < width; n++)
+		for (f = 0; f < height; f++)
 		{
-			newstr[f][n] = 0;
+			for (n = 0; n < width; n++)
+			{
+				newstr[f][n] = 0;
+			}
 		}
 	}
 	return (newstr);
