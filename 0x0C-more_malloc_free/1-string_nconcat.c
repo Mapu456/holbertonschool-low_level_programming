@@ -25,16 +25,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (c = 0; s2[c] != '\0'; c++)
 	{
 	}
-	p = malloc(sizeof(char) * i + c + 1);
+	if (n >= c)
+	{
+		c = n;
+	}
+	p = malloc((sizeof(char) * (i + c)) + 1);
 	if (p == NULL)
 	{
 		return (NULL);
 	}
-	else if (n >= c)
-	{
-		return (s2);
-	}
-	else
+	else if
 	{
 		for (j = 0; j < i; j++)
 		{
