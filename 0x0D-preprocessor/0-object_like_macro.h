@@ -1,5 +1,5 @@
-#ifndef _EXERCISES
-#define _EXERCISES
+#ifndef _EXERCISES_HOL
+#define _EXERCISES_HOL
 
 #define SIZE 1024
 
