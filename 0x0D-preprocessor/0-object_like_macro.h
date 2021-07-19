@@ -1,5 +1,5 @@
-#ifndef _EXERCISES_HOL
-#define _EXERCISES_HOL
+#ifndef SIZE_GENERIC_MACRO
+#define SIZE_GENERIC_MACRO
 
 #define SIZE 1024
 
