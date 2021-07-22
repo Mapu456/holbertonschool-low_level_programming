@@ -7,12 +7,12 @@
  * @argv:Argument vectors
  * Return: int
  */
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
 	int c;
 	int i;
 
-	int (pointerf)(int, int);
+	int (*p)(int, int);
 
 	if (argc != 4)
 	{
@@ -24,14 +24,18 @@ int main(int argc, char argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	pointerf = get_op_func(argv[2]);
-	if (pointerf == NULL)
+
+	c = atoi(argv[1]);
+	i = atoi(argv[3]);
+
+	p = get_op_func(argv[2]);
+
+	if (p == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	c = atoi(argv[1]);
-	i = atoi(argv[3]);
-	printf("%d\n", pointerf(c, i));
+	printf("%d\n", p(c, i));
 	return (0);
 }
+
