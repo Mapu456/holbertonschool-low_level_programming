@@ -6,7 +6,7 @@
  * @separator: comma space
  * @n: number of elements to be printed
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list parametros;
 	unsigned int i;
@@ -19,7 +19,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(parametros, n);
 	for (i = 0; i < n; i++)
 	{
-		c = va_arg(parametros, const unsigned int);
+		c = va_arg(parametros, char *);
 		if (c == NULL)
 		{
 			c = "(nil)";
