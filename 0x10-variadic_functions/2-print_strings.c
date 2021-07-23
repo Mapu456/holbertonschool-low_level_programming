@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 /**
- * print_numbers - Entry Point
+ * print_strings - Entry Point
  * @separator: comma space
  * @n: number of elements to be printed
  */
