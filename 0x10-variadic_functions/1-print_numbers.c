@@ -10,7 +10,7 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list parametros;
-	int i, c, a;
+	unsigned int i, c;
 
 	va_start(parametros, n);
 	if (separator == NULL)
