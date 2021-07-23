@@ -12,26 +12,24 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list parametros;
 	unsigned int i, c;
 
-	va_start(parametros, n);
 	if (separator == NULL)
 	{
 		return;
 	}
-	else
+	va_start(parametros, n);
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < n; i++)
+		c = va_arg(parametros, const unsigned int);
+		if (i == (n - 1))
 		{
-			c = va_arg(parametros, const unsigned int);
-			if (i == (n - 1))
-			{
-				printf("%d", c);
-			}
-			else
-			{
-				printf("%d %s", c, separator);
-			}
+			printf("%d", c);
 		}
-		printf("\n");
+		else
+		{
+			printf("%d %s", c, separator);
+		}
 	}
+	printf("\n");
 	va_end(parametros);
 }
+
