@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 		case 's':
 			c = va_arg(parametros, char *);
 			if (c == NULL)
-				    c = "(nil)";
+				c = "(nil)";
 			printf("%s%s", c, j);
 			break;
 		}
