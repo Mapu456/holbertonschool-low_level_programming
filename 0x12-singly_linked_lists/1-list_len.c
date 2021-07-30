@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * print_list - function that prints the arguments
+ * list_len - function that prints the arguments
  * @h: is the space with the values of struct
  *
  * Return: the number of nodes printed
