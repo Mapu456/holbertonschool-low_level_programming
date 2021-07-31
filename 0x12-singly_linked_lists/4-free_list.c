@@ -4,7 +4,7 @@
 #include "lists.h"
 /**
  * free_list - function that free the code
- *
+ * @head: node
  * Return: Always 0.
  */
 void free_list(list_t *head)
@@ -19,4 +19,5 @@ void free_list(list_t *head)
         head = final;
     }
 }
+
 
