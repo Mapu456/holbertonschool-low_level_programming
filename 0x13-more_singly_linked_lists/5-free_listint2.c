@@ -15,13 +15,10 @@ void free_listint2(listint_t **head)
 	{
 		return;
 	}
-	else
+	while (*head != NULL)
 	{
-		while (*head != NULL)
-		{
-			aux1 = (*head)->next;
-			free(*head);
-			*head = aux1;
-		}
+		aux1 = (*head)->next;
+		free(*head);
+		*head = aux1;
 	}
 }
