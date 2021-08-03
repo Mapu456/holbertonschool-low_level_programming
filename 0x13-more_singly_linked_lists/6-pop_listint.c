@@ -18,9 +18,11 @@ int pop_listint(listint_t **head)
 	else
 	{
 		aux1 = (*head)->n;
+		free(*head);
 		*head = (*head)->next;
 	}
 	return (aux1);
 }
+
 
 
