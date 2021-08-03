@@ -5,7 +5,7 @@
 /**
  * free_listint2 - function that free the code
  * @head: node
- * Return: Always 0.
+ * Return: nothing.
  */
 void free_listint2(listint_t **head)
 {
