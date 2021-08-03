@@ -9,7 +9,7 @@
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *aux1;
+	listint_t *aux1 = NULL;
 
 	if (*head == NULL)
 	{
