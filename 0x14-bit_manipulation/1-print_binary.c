@@ -7,7 +7,9 @@
  */
 void print_binary(unsigned long int n)
 {
-	int c, result, j;
+	int c = 0;
+	int result = 0;
+	int j = 0;
 
 	for (c = 0; n >> c; c++)
 	{
