@@ -2,13 +2,12 @@
 #include "main.h"
 /**
  * get_bit - function
- * @i: input
+ * @n: input
  * @index: index
  * Return: 0
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int j;
 	int res;
 	unsigned long int num = n;
 
