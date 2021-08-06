@@ -11,6 +11,7 @@
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int bits = 64;
+	unsigned int tempo;
 
 	if (index <= bits)
 	{
