@@ -10,17 +10,16 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int res;
+	unsigned int bits = 64;
 
-	res = (n >> index) & 1;
-
-	if ((res == 1) || (res == 0))
+	if (index <= bits)
 	{
-		return (res);
+		return ((n >> index) & 1);
 	}
 	else
 	{
 		return (-1);
 	}
 }
+
 
