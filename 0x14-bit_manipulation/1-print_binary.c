@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_binary - function
- * @n: const char
- * Return: 0
+ *print_binary - This function prints the binary representation of a number.
+ *@n: It's the number to represent in binary.
+ * return - 0
  */
 void print_binary(unsigned long int n)
 {
-	int c, result;
-	int j;
+	int c, result, j;
 
 	for (c = 0; n >> c; c++)
 	{
