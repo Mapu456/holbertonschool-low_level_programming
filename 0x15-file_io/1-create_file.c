@@ -7,9 +7,9 @@
 #include <unistd.h>
 #include "main.h"
 /**
-* read_textfile - function
+* create_file - function
 * @filename: name of the file
-* @letters: number of letters that we should read and print
+* @text_content: number of letters that we should read and print
 * Return: 0 if it fails
 */
 int create_file(const char *filename, char *text_content)
