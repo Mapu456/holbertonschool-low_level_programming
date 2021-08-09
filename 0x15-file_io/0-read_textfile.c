@@ -14,10 +14,10 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	int rd;
-	int wr;
-	int c;
+	int fd = 0;
+	int rd = 0;
+	int wr = 0;
+	int c = 0;
 	char *buf;
 
 	if (filename == NULL)
