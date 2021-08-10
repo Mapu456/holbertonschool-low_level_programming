@@ -14,12 +14,15 @@
  */
 int main(int argc, char *argv[])
 {
-	int file_from = 0, file_to = 0, j = 0, i = 0, rd = 0, wr = 0;
+	int file_from = 0, file_to = 0, j = 0, i = 0;
+	int rd = 0, wr = 0;
 	char *buf[1024];
 
 	if (argc != 3)
+	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
+	}
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
 	{
@@ -58,4 +61,3 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
-
