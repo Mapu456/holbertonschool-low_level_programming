@@ -14,12 +14,12 @@
  */
 int main(int argc, char *argv[])
 {
-	int file_from;
-	int file_to;
-	int j;
-	int i;
-	int rd;
-	int wr;
+	int file_from = 0;
+	int file_to = 0;
+	int j = 0;
+	int i = 0;
+	int rd = 0;
+	int wr = 0;
 	char *buf[1024];
 
 	if (argc != 3)
@@ -36,7 +36,8 @@ int main(int argc, char *argv[])
 	rd = read(file_from, buf, 1024);
 	if (rd == -1)
 	{
-		return(-1);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	file_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (file_to == -1)
@@ -47,7 +48,8 @@ int main(int argc, char *argv[])
 	wr = write(file_to, buf, 1024);
 	if (wr == -1)
 	{
-		return(-1);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
 	j = close(file_from);
 	i = close(file_to);
