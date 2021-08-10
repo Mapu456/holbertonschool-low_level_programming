@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 	}
 	if (i == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", j);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", i);
 		exit(100);
 	}
 	return (0);
