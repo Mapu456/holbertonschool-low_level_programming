@@ -14,31 +14,20 @@
  */
 int main(int argc, char *argv[])
 {
-	int file_from = 0;
-	int file_to = 0;
-	int j = 0;
-	int i = 0;
-	int rd = 0;
-	int wr = 0;
+	int file_from = 0, file_to = 0, j = 0, i = 0, rd = 0, wr = 0;
 	char *buf[1024];
 
 	if (argc != 3)
-	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
-	}
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
-	}
 	rd = read(file_from, buf, 1024);
 	if (rd == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
-	}
 	file_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (file_to == -1)
 	{
