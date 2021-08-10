@@ -36,7 +36,8 @@ int main(int argc, char *argv[])
 	rd = read(file_from, buf, 1024);
 	if (rd == -1)
 	{
-		return (0);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	file_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (file_to == -1)
