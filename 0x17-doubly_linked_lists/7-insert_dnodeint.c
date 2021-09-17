@@ -3,8 +3,10 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * sum_dlistint - function to return i
- * @head: the first in the head
+ * insert_dnodeint_at_index - function to return i
+ * @h: the first in the head
+ * @idx: the first in the head
+ * @n: the first in the head
  * Return: i the number of h elements
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
