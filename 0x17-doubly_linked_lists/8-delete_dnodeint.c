@@ -12,30 +12,31 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *current = *head;
 	dlistint_t *delete_node2 = current->prev;
-	dlistint_t *delete_node = *head;
+	dlistint_t *delete_node = current->next;
 	unsigned int count = 0;
 
-	if (!head)
-	{
-		return (NULL);
-	}
 	if (index == 0)
 	{
-		(*head)->next = NULL;
-		(*head)->next->prev = NULL;
 		*head = delete_node->next;
 		free(delete_node);
+		return (1);
 	}
-	while (current)
+	if (*head == NULL)
 	{
-		if (count == index)
-		{
-			delete_node2->prev->next = current;
-			current->prev = delete_node2->prev->next;
-			delete_node2->next = NULL;
-			delete_node2->prev = NULL;
-			free(delete_node2);
-			return (1);
-		}
 		return (-1);
 	}
+	else
+	{
+			while (current)
+		{
+			if (count == index)
+			{
+				delete_node2->prev->next = current;
+				current->prev = delete_node2->prev->next;
+				free(delete_node2);
+				return (1);
+			}
+		}
+	}
+	return (-1);
+}
