@@ -22,22 +22,24 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	index = key_index((unsigned char *)key, ht->size);
 	temp = ht->array[index];
+	new_node = malloc(sizeof(hash_node_t));
+	if (new_node == NULL)
+	{
+		return (0);
+	}
+	new_node->key = (char *)key;
+	new_node->value = strdup(value);
+	new_node->next = NULL;
 	if (temp == NULL)
 	{
-		new_node = malloc(sizeof(hash_node_t));
-		if (new_node == NULL)
-		{
-			return (0);
-		}
-		new_node->key = (char *)key;
-		new_node->value = (char *)value;
-		new_node->next = temp;
+		/*si el node se va poner al final todos los nodos*/
 		temp = new_node;
 	}
 	else
-	{
+	{	/*recorra siempre y cuando el nodo este lleno*/
 		while (temp != NULL)
 		{
+			/*recorra los nodos verificando si el temp->key == key*/
 			if (strcmp(temp->key, key) == 0)
 			{
 				free(temp->value);
@@ -46,6 +48,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			}
 			temp = temp->next;
 		}
+		/*recorrio todo y el key no esta en los nodos*/
+		/*entonces, agregue el nuevo nodo en la mitad*/
+		new_node->next = temp;
+		temp = new_node;
 	}
 	return (1);
 }
