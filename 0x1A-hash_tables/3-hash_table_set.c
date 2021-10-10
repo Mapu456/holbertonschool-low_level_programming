@@ -26,7 +26,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	while (temp != NULL)
 	{
 		/*recorra los nodos verificando si el temp->key == key*/
-		if (strcmp(new_node->key, key) == 0)
+		if (strcmp(temp->key, key) == 0)
 		{
 			free(temp->value);
 			temp->value = strdup(value);
@@ -41,7 +41,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
-	new_node->next = temp;
-	temp = new_node;
+	new_node->next = NULL;
+	if (temp == NULL)
+	{
+		/*si el node se va poner al final todos los nodos*/
+		temp = new_node;
+	}
+	else
+	{
+		/*recorrio todo y el key no esta en los nodos*/
+		/*entonces, agregue el nuevo nodo en la mitad*/
+		new_node->next = temp;
+		temp = new_node;
+	}
 	return (1);
 }
