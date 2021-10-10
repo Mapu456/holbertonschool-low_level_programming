@@ -3,11 +3,12 @@
 #include <stdio.h>
 #include "hash_tables.h"
 /**
-  * hash_table_get - gives the value of a node
+  * hash_table_print - gives the value of a node
   * @ht: the key of the hash
   */
 void hash_table_print(const hash_table_t *ht)
 {
+	hash_node_t *temp;
 	unsigned long int index = 0;
 
 	if (ht == NULL)
@@ -17,12 +18,13 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	for (index = 0; index < ht->size; index++)
 	{
-		while (ht->array[index] != NULL)
+		temp = ht->array[index];
+		while (temp != NULL)
 		{
-			printf("'%s': '%s'", ht->array[index]->key, ht->array[index]->value);
-			if (ht->array[index]->next)
+			printf("'%s': '%s'", temp->key, temp->value);
+			if (temp->next)
 				printf(", ");
-			ht->array[index] = ht->array[index]->next;
+			temp = temp->next;
 		}
 	}
 	printf("}\n");
