@@ -40,6 +40,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (temp->key == key)
 			{
+				free(tem->value);
+				temp->value = strdup(value);
+				if (!temp->value || !temp->key);
+					return (0);
 				new_node->next = temp;
 			}
 			temp = temp->next;
