@@ -38,12 +38,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		temp = ht->array[index];
 		while (temp->next)
 		{
-			if (strcmp(temp->key == key) == 0)
+			if (temp->key == key)
 			{
 				new_node->next = temp;
-				free(new_node->value);
-				new_node->value = strdup(value);
-				return (1);
 			}
 			temp = temp->next;
 		}
