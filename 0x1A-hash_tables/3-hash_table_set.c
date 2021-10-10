@@ -27,7 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		return (0);
 	}
-	new_node->key = (char *)key;
+	new_node->key = strdup(key);
 	new_node->value = strdup(value);
 	new_node->next = NULL;
 	if (temp == NULL)
@@ -40,10 +40,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		while (temp != NULL)
 		{
 			/*recorra los nodos verificando si el temp->key == key*/
-			if (strcmp(temp->key, key) == 0)
+			if ((temp->key == key)
 			{
 				free(temp->value);
 				temp->value = strdup(value);
+				if (!temp->value)
+					return (0);
 				return (1);
 			}
 			temp = temp->next;
