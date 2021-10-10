@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "hash_tables.h"
 /**
-  * hash_table_delete - gives the value of a node
+  * hash_table_delete - gives the value of a temp
   * @ht: the key of the hash
   */
 void hash_table_delete(hash_table_t *ht)
@@ -20,16 +20,20 @@ void hash_table_delete(hash_table_t *ht)
 	if (ht == NULL)
 		return;
 
-	for (; index < ht->size; index++)
+	while (index < ht->size)
 	{
+		temp = ht->array[index];
 		while (temp != NULL)
 		{
+		/* save the next to temp1 ptr*/
 			temp1 = temp->next;
 			free(temp->key);
 			free(temp->value);
 			free(temp);
+		/* reassign temp1 to the temp */
 			temp = temp1;
 		}
+	index++;
 	}
 	free(ht->array);
 	free(ht);
