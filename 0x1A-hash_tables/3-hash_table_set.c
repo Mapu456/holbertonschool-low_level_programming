@@ -20,35 +20,32 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		return (0);
 	}
-	new_node = malloc(sizeof(hash_node_t));
-	if (new_node == NULL)
-	{
-		return (0);
-	}
-	new_node->key = (char *)key;
-	new_node->value = (char *)value;
-	new_node->next = NULL;
 	index = key_index((unsigned char *)key, ht->size);
-	if (ht->array[index] == NULL)
+	temp = ht->array[index];
+	if (temp == NULL)
 	{
-		ht->array[index] = new_node;
+		new_node = malloc(sizeof(hash_node_t));
+		if (new_node == NULL)
+		{
+			return (0);
+		}
+		new_node->key = (char *)key;
+		new_node->value = (char *)value;
+		new_node->next = temp;
+		temp = new_node;
 	}
 	else
 	{
-		temp = ht->array[index];
-		while (temp->next)
+		while (temp != NULL)
 		{
-			if (temp->key == key)
+			if (strcmp(temp->key, key) == 0)
 			{
-				free(tem->value);
+				free(temp->value);
 				temp->value = strdup(value);
-				if (!temp->value || !temp->key);
-					return (0);
 				return (1);
 			}
 			temp = temp->next;
 		}
-		temp->next = new_node;
 	}
 	return (1);
 }
